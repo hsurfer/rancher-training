@@ -13,13 +13,13 @@ index.html and slides are packaged into a docker. This docker would start a web 
 ## Build
 
 ```
-docker build -t rawmind/rancher-training:0.1-0 .
+docker build -t rawmind/rancher-training:0.1-2 .
 ```
 
 ## Run
 
 ```
-docker run -td -p 8080:8080 rawmind/rancher-training:0.1-0
+docker run -td -p 8080:8080 rawmind/rancher-training:0.1-2
 ```
 
 Access training content from your web browser, http://localhost:8080
