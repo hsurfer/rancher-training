@@ -33,7 +33,7 @@ Also, the scheduler is responsible to move or to rebalance the services if a ser
 
 Principal scheduler/orchestrator in the market
 
-<img src="slides/Containers_Platform/slides/images/scheduler.jpg", style="height:auto; width:900; background-color:white; float:center;"/>
+<img src="slides/Containers_Platform/slides/images/scheduler.jpg", style="height:600; width:auto; background-color:white; float:center;"/>
  
 
 ---
@@ -78,7 +78,7 @@ System discovery is dependent of the scheduler you are using.
 
 Principal Service discovery in the market
 
-<img src="slides/Containers_Platform/slides/images/service_discovery.jpg", style="height:auto; width:900; background-color:white; float:center;"/>
+<img src="slides/Containers_Platform/slides/images/service_discovery.jpg", style="height:600; width:auto; background-color:white; float:center;"/>
 
 ---
 
@@ -101,7 +101,7 @@ Principal service management in the market
 
 #### Container Platform
 
-<img src="slides/Containers_Platform/slides/images/container_platform.jpg", style="height:auto; width:900; background-color:white; float:center;"/>
+<img src="slides/Containers_Platform/slides/images/container_platform.jpg", style="height:600; width:auto; background-color:white; float:center;"/>
 
 ---
 
