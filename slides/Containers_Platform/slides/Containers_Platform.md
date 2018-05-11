@@ -224,7 +224,7 @@ Full featured API
 
 ### Example
 
-Create deployments for every microservice defined in previuops examples and publish external access to it.
+Create deployments for every microservice defined in previuous examples and publish external access to it.
 
 ---
 
@@ -309,7 +309,6 @@ spec:
 
 gateway-deployment.yml
 ```
----
 kind: Deployment
 apiVersion: extensions/v1beta1
 metadata:
@@ -327,7 +326,6 @@ spec:
         ports:
         - containerPort: 8080
           protocol: TCP
-
 ```
 
 ---
@@ -352,7 +350,7 @@ spec:
     name: http
   selector:
     app: shipping
-
+```
 ---
 
 payments-service.yml
