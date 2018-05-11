@@ -8,7 +8,7 @@ index.html and slides are packaged into a docker. This docker would start a web 
 
 ## Versions
 
-- `0.1-1` [(Dockerfile)](https://github.com/rawmind0/rancher-training/blob/0.1-1/Dockerfile)
+- `0.1-2` [(Dockerfile)](https://github.com/rawmind0/rancher-training/blob/0.1-2/Dockerfile)
 
 ## Build
 
