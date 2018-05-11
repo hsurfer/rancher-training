@@ -8,18 +8,18 @@ index.html and slides are packaged into a docker. This docker would start a web 
 
 ## Versions
 
-- `0.1-2` [(Dockerfile)](https://github.com/rawmind0/rancher-training/blob/0.1-2/Dockerfile)
+- `0.1-3` [(Dockerfile)](https://github.com/rawmind0/rancher-training/blob/0.1-2/Dockerfile)
 
 ## Build
 
 ```
-docker build -t rawmind/rancher-training:0.1-2 .
+docker build -t rawmind/rancher-training:0.1-3 .
 ```
 
 ## Run
 
 ```
-docker run -td -p 8080:8080 rawmind/rancher-training:0.1-2
+docker run -td -p 8080:8080 rawmind/rancher-training:0.1-3
 ```
 
 Access training content from your web browser, http://localhost:8080
