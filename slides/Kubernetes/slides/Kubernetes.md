@@ -56,7 +56,7 @@ For production, running each plane runs on dedicated physical or virtual hosts i
 ---
 
 #### Architecture
-<img src="slides/Kubernetes/slides/images/k8s-scheme-v2.0.jpg", style="width:auto; height:auto; background-color:white; align:center;"/>
+<img src="slides/Kubernetes/slides/images/k8s-scheme.jpg", style="width:auto; height:auto; background-color:white; align:center;"/>
 
 ---
 
@@ -64,7 +64,7 @@ For production, running each plane runs on dedicated physical or virtual hosts i
 Comprised of etcd cluster services which persist data ok k8s cluster. 
 
 - etcd
-- cattle-node-agent (if k8s cluster is managed by Rancher)
+- rancher-agent 
 
 Resiliency is achieved by adding 3 hosts to this plane.
 
@@ -80,8 +80,7 @@ k8s/Rancher stateless and scalable components which orchestrate and manage worke
 - kube-apiserver
 - kube-scheduler
 - kube-controller-manager
-- cattle-cluster-agent (if k8s cluster is managed by Rancher)
-- cattle-node-agent (if k8s cluster is managed by Rancher)
+- rancher-agent
 
 ---
 
@@ -94,7 +93,7 @@ k8s/Rancher stateless and scalable components which orchestrate and manage worke
 Comprised of the real workload (Kubernetes pods) and k8s/Rancher components, orchestrated and managed by k8s control plane:
 - kubelet
 - kube-proxy
-- cattle-node-agent (if k8s cluster is managed by Rancher)
+- rancher-agent
 
 ---
 
@@ -118,15 +117,10 @@ Characteristics
 - No resiliency to host failure
 - Low performance
 
-Instructions
-- Create 1 host with >=1 CPU and >=4GB RAM.
-- Create RKE template with 3 roles at single node.
-- Deploy RKE cluster.
-
 ---
 
 #### Standalone
-<img src="slides/Kubernetes/slides/images/standalone-scheme-v2.0.jpg", style="width:auto; height:auto; background-color:white; align:center;"/>
+<img src="slides/Kubernetes/slides/images/standalone-scheme.jpg", style="width:auto; height:auto; background-color:white; align:center;"/>
 
 ---
 
@@ -141,16 +135,7 @@ Characteristics
 ---
 
 #### Overlapping planes
-
-Instructions
-- Create 3 hosts with >=1 CPU and >=4GB RAM.
-- Create RKE template with 3 roles at every node.
-- Deploy RKE cluster.
-
----
-
-#### Overlapping planes
-<img src="slides/Kubernetes/slides/images/overlapped_planes-scheme-v2.0.jpg", style="width:auto; height:auto; background-color:white; align:center;"/>
+<img src="slides/Kubernetes/slides/images/overlapped_planes-scheme.jpg", style="width:auto; height:auto; background-color:white; align:center;"/>
 
 ---
 
@@ -164,19 +149,9 @@ Characteristics
 
 ---
 
-Instructions
-- Create 7 hosts with >=1 CPU and >=4GB RAM.
-- Create RKE template with 
-  - 3 nodes with etcd role.
-  - 2 nodes with controlplane role.
-  - 2 nodes with worker role.
-- Deploy RKE cluster.
-
----
-
 #### Separated planes
 
-<img src="slides/Kubernetes/slides/images/separated_planes-scheme-v2.0.jpg", style="width:auto; height:auto; background-color:white; align:center;"/>
+<img src="slides/Kubernetes/slides/images/separated_planes-scheme.jpg", style="width:auto; height:auto; background-color:white; align:center;"/>
 
 ---
 
@@ -186,7 +161,6 @@ Based on functionality, services are split into 4 categories:
 - K8s master: k8s services that conform etcd and control planes.
 - K8s node: k8s services that conform worker plane.
 - K8s addons: k8s optional services that extend k8s functionality.
-- Rancher services: rancher services at all planes to control and manage k8s cluster.
 
 https://kubernetes.io/docs/concepts/overview/components/
 
@@ -251,14 +225,6 @@ Some typical addons:
 - DNS: K8s cluster dns to maintain  dns records for services. 
 - Web UI: allows users to manage and troubleshoot applications running in the cluster. 
 - Container Resource Monitoring: records generic time-series metrics about containers in a central database, and provides a UI for browsing that data.
-
----
-
-#### Rancher services
-
-These services would be running if k8s cluster is managed by Rancher:
-- cattle-cluster-agent: Rancher Cluster agent that connect and report cluster status to rancher API.
-- cattle-node-agent: Rancher node agent that connect and report node status to rancher API.
 
 ---
 
